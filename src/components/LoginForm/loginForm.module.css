@@ -1,0 +1,47 @@
+.formContainer {
+    height: 35rem;
+    background-color: rgb(44, 42, 42);
+    width: 25rem;
+    border: solid 2px greenyellow;
+    margin: auto;
+    margin-top: 5%;
+    border-radius: 15px;
+    padding: 25px 25px;
+    box-shadow: 10px;
+    color: white;
+}
+.username{
+    font-weight: 300;
+    font-size: 24px;
+}
+.userInput{
+    width: 70%;
+    /* margin: auto; */
+    font-size: 20px;
+    border: none;
+    height: 2rem;
+    border: solid 2px blue;
+    border-radius: 10px;
+}
+.userInput:active{
+    border: none;
+    border: solid 2px red;
+    
+}
+.logInBtn{
+    background-color: rgb(203, 189, 189);
+    width: 8rem;
+    height: 2rem;
+    border-radius: 10px;
+    margin-top: 40px;
+    font-size: 1.2rem;
+    color: rgb(0, 0, 0);
+    border: none;
+}
+.logInBtn:hover{
+    background-color: brown;
+    color: white;
+}
+.logInBtn:active{
+    scale: 1.2;
+}
