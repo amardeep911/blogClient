@@ -11,18 +11,20 @@ function LoginForm() {
   console.log(email);
   console.log(password)
   function responseHandler (res){
-    if(res.data === 'Invalid User'){
-      navigate("/signUp")
-    }
-    else return
+      if(res.data !== 'userCreated'){
+        navigate('/signUp')
+       
+      }
+      else console.log('Matched')
+    
   }
 
   function submitHandler (event) {
     event.preventDefault();
-    const data = JSON.stringify({
+    const data = {
       email: email,
       password: password
-    })
+    }
     const config={
       headers: { 
         'Content-Type': 'application/json'
@@ -30,7 +32,7 @@ function LoginForm() {
       data:data
     }
     
-    axios.post('http://192.168.0.154:8080/login',config,data).then(res => responseHandler(res)).catch((err)=> console.log("fsdf"))
+    axios.post('http://localhost:8080/auth/login',config,data).then(res => responseHandler(res)).catch((err)=> console.log('error'))
   }
 
   return (
