@@ -50,10 +50,9 @@ function SignUp() {
        <p className={styles.username}>Password</p>
        <input type="text" name="password" id="2" className={styles.userInput} onChange={(e)=> setPassword(e.target.value
         )} />
-       {/* <p className={styles.username}>Confirm Password</p>
-       <input type="text" name="confirmpassword" id="3" className={styles.userInput} /> */}
        <button className={styles.logInBtn} onClick={submitHandler}>Sign up</button>
        </form>
+       <button className={styles.logInBtn} onClick={()=> navigate('/homePage')}>Welcome</button>
       </div>
     </div>
   )

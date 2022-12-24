@@ -46,7 +46,9 @@ function LoginForm() {
        <p className={styles.username}>Password</p>
        <input type="text" name="password" id="#" className={styles.userInput} onChange={(e)=> setPassword(e.currentTarget.value)}/>
        <button className={styles.logInBtn} onClick={submitHandler}>LogIn</button>
+       
        </form>
+       <button className={styles.logInBtn} onClick={()=>{navigate('/homePage')}}>welcome</button>
       </div>
     </div>
   )
