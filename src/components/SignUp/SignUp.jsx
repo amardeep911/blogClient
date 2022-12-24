@@ -1,31 +1,33 @@
 import React from 'react'
 import styles from './SignUp.module.css';
 import { useRef, useState } from 'react';
+import { useNavigate, useNavigation } from 'react-router-dom';
 
 // const { register, handleSubmit, getValues, watch, formState: { errors } } = useForm();
 import axios from 'axios'
 // import qs from 'query-string'
+// import navigate from 'react-router-dom'
 function SignUp() {
+  const navigate = useNavigate();
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+
   console.log(email);
   console.log(password)
   
-  const [submit, setSubmit] = useState(false)
-
-    
- 
-  console.log(submit)
 
   function submitHandler (event) {
     event.preventDefault();
-    const data = JSON.stringify({
+    const data ={
       email: email,
       password: password
-    })
+    }
 
   function responseHandler(res){
-    console.log(res)
+    if(res.data !== 'All Ok'){
+      console.log('error')
+    }
+    else navigate('/login')
   }
     const config={
       headers: { 
@@ -34,7 +36,7 @@ function SignUp() {
       data:data
     }
     
-    axios.post('http://192.168.0.154:8080/signUp',config,data).then(res => responseHandler(res)).catch((err)=> console.log("fsdf"))
+    axios.post('http://localhost:8080/auth/signUp',config,data).then(res => responseHandler(res)).catch(err => console.log(err))
   }
   
     

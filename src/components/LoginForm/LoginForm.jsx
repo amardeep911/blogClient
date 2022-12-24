@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './loginForm.module.css';
 import { useRef, useState } from 'react';
 import axios from 'axios'
+axios.defaults.withCredentials=true;
 import { useNavigate } from 'react-router-dom';
 import qs from 'query-string'
 function LoginForm() {
@@ -11,11 +12,12 @@ function LoginForm() {
   console.log(email);
   console.log(password)
   function responseHandler (res){
-      if(res.data !== 'userCreated'){
+    console.log(res)
+      if(res.data.message !== 'userCreated'){
         navigate('/signUp')
        
       }
-      else console.log('Matched')
+      else navigate('/homepage')
     
   }
 
