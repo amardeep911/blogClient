@@ -1,24 +1,8 @@
-
-
 .navbar{
-    display: flex;
-    width: 100%;
-    height: 4rem;
-    background-color: aqua;
-    flex: 1 2 1;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
 }
-.links{
+.items{
     display: flex;
-    
-    background-color: aliceblue;
-    text-decoration: none;
-    list-style: none;
-    /* justify-content: space-between; */
-}
-.links a{
-    margin-left: 10px;
-    text-decoration: none;
-    list-style: none;
-    
+    flex-direction: row;
 }

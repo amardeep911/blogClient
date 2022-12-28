@@ -1,25 +1,19 @@
 import React from 'react'
 import styles from './navbar.module.css'
-function Navbar() {
+const Navbar = () => {
   return (
-    <header className={styles.navbar}>
-        <div className="logo">
-            Untitled UI
-        </div>
-        <div>
-            <ul  className={styles.links}>
+    <div className={styles.navbar}>
+        <div className="logo">Logo</div>
+        <div className={styles.items}>
+            <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact us</a></li>
             </ul>
         </div>
-        <div className="handlers">
-            <button>Login</button>
-            <button>Signup </button>
-        </div>
-    </header>
+        <div className="user">Amardeep Ranjan</div>
+    </div>
   )
 }
 

@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./welcome.module.css";
+import styles from "./landing.module.css";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
@@ -41,17 +41,15 @@ const Landing = () => {
     "Loading"
   ) : (
     <div className={styles.container}>
-      <div className={styles.inner}>
-        <button className={styles.logOut} onClick={signUpHandler}>
-          SIGNUP
-        </button>
-        <button className={styles.logOut} onClick={logInHandler}>
-          LoGIN
-        </button>
-        <div className={styles.heading}>
-          <h1 className={styles.title}>Landing</h1>
-          <h1 className={styles.name}>Amardeep land Ranjan</h1>
-        </div>
+      <div className={styles.left}>
+        <h1 className={styles.title}>BlogCart</h1>
+        <h1 className={styles.heading}>Thoughts & ideas around the things that actually matter</h1>
+      </div>
+      <div className={styles.right}>
+        <p>Do Log in</p>
+        <button className={styles.logInBtn} onClick={logInHandler}>Log In</button>
+        <p>Don't have an account</p>
+        <button className={styles.logInBtn} onClick={signUpHandler}>Sign Up</button>
       </div>
     </div>
   );

@@ -15,6 +15,9 @@ function App() {
         <Route path="/homePage" element={<Welcome />} />
       </Route>
       <Route path="/login" element={<LoginForm />} />
+      <Route path="/card" element={<Card />} />
+      <Route path="/nav" element={<Navbar />} />
+      
       <Route path="/signUp" element={<SignUp />} />
       <Route path="/" element={<Landing />} />
     </Routes>
