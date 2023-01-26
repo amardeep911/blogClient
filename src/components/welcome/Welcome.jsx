@@ -15,6 +15,9 @@ const Welcome = () => {
   return (
     <div className={styles.container}>
     {/* <Navbar/> */}
+    <Card/>
+    <Card/>
+    <Card/>
     hwlw
     </div>
   );
