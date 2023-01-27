@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./loginForm.module.css";
+import './loginForm.module.css'
 import { useRef, useState } from "react";
 import axios from "axios";
 axios.defaults.withCredentials = true;
@@ -12,6 +13,7 @@ function LoginForm() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [valid, isValid] = useState(true);
   console.log(email);
 
   console.log(password);
@@ -45,7 +47,7 @@ function LoginForm() {
       .then((res) => responseHandler(res))
       .catch((err) => console.log("error"));
   }
-
+   const change = valid ? "userInput" : 'styles.userInputValid';
   return (
     <div className={styles.formContainer}>
       <div className="innerContainer">

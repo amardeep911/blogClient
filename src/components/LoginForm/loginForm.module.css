@@ -24,10 +24,13 @@
     border: solid 2px blue;
     border-radius: 7px;
 }
+
 .userInput:active{
     border: none;
     border: solid 2px red;
-    
+}
+.userInputValid{
+    opacity: 0;
 }
 
 /* .logInBtn {
