@@ -50,6 +50,7 @@ function SignUp() {
           <input
             type="text"
             name="username"
+            placeholder="Email"
             id="1"
             className={styles.userInput}
             onChange={(e) => setEmail(e.target.value)}
@@ -58,6 +59,7 @@ function SignUp() {
           <input
             type="text"
             name="password"
+            placeholder="Password"
             id="2"
             className={styles.userInput}
             onChange={(e) => setPassword(e.target.value)}
@@ -66,12 +68,6 @@ function SignUp() {
             Sign up
           </button>
         </form>
-        <button
-          className={styles.logInBtn}
-          onClick={() => navigate("/homePage")}
-        >
-          Welcome
-        </button>
       </div>
     </div>
   );

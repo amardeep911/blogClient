@@ -49,12 +49,14 @@ function LoginForm() {
   return (
     <div className={styles.formContainer}>
       <div className="innerContainer">
+      <h1>Log in please...</h1>
         <form method="POST" onSubmit={submitHandler}>
           <p className={styles.username}>Username</p>
           <input
-            type="text"
+            type="email"
             name="username"
             id="#"
+            placeholder="Username"
             className={styles.userInput}
             onChange={(e) => setEmail(e.currentTarget.value)}
           />
@@ -62,6 +64,7 @@ function LoginForm() {
           <input
             type="text"
             name="password"
+            placeholder="Password"
             id="#"
             className={styles.userInput}
             onChange={(e) => setPassword(e.currentTarget.value)}
@@ -70,14 +73,6 @@ function LoginForm() {
             LogIn
           </button>
         </form>
-        <button
-          className={styles.logInBtn}
-          onClick={() => {
-            navigate("/homePage");
-          }}
-        >
-          welcome
-        </button>
       </div>
     </div>
   );

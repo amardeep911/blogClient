@@ -46,7 +46,7 @@ const Landing = () => {
         <h1 className={styles.heading}>Thoughts & ideas around the things that actually matter</h1>
       </div>
       <div className={styles.right}>
-        <p>Do Log in</p>
+        <p>Log in</p>
         <button className={styles.logInBtn} onClick={logInHandler}>Log In</button>
         <p>Don't have an account</p>
         <button className={styles.logInBtn} onClick={signUpHandler}>Sign Up</button>

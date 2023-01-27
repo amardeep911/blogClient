@@ -14,13 +14,19 @@ const Welcome = () => {
   }
   return (
     <div className={styles.container}>
-    {/* <Navbar/> */}
-    <Card/>
-    <Card/>
-    <Card/>
-    hwlw
+     <div className={styles.main}>
+      <div className={styles.blank}></div>
+      <div className={styles.blog}>
+        <Card/>
+        <Card/>
+        <Card/>
+        <Card/>
+        <Card/>
+      </div>
+      <div className={styles.blank}></div>
+     </div>
     </div>
   );
-};
+}
 
 export default Welcome;
