@@ -22,7 +22,8 @@ function LoginForm() {
   function responseHandler(res) {
     console.log(res);
     if (res.data.message !== "userCreated") {
-      navigate("/signUp");
+      alert('wrong ceredential')
+      
     } else {
       dispatch(LoginUser());
       navigate("/homePage");
