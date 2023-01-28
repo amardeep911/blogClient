@@ -25,6 +25,7 @@
     font-family: 'Montserrat', sans-serif;
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
+    cursor: pointer;
 }
 .content {
     margin-left: 1rem;
@@ -33,6 +34,7 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     color: rgb(163, 160, 160);
+    cursor: pointer;
 
     /* --max-lines: 3;
     display: --webkit-box;

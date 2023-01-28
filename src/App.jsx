@@ -7,13 +7,16 @@ import Card from "./components/Card/Card";
 import Navbar from "./components/Navbar/Navbar";
 import PrivateRoutes from "./routerutils/PrivateRoutes";
 import Landing from "./components/Lanidng/Landing";
+import Blog from "./components/BlogPage/Blog";
 
 function App() {
   return (
     <Routes>
       <Route element={<PrivateRoutes />}>
         <Route path="/homePage" element={<Welcome />} />
+        <Route path="/blogsPage" element={<Blog/>} />
       </Route>
+      <Route path="/blogsPage" element={<Blog/>} />
       <Route path="/login" element={<LoginForm />} />
       <Route path="/card" element={<Card />} />
       <Route path="/nav" element={<Navbar />} />
